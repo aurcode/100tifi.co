@@ -1,1 +1,3 @@
-console.log("funcionando")
+import router from './routes/index'
+
+window.addEventListener('load', router);
