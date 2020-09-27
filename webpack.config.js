@@ -6,7 +6,7 @@ const { Template } = require('webpack');
 
 module.exports = {
     //Aquí se encuentra toda la configuración de lo que va a suceder. Modulo para exportar.
-    entry: '.src/index.js', //Punto de entrada con su dirección.Aquí vive el código inicial y de aquí parte al desarrollo.
+    entry: './src/index.js', //Punto de entrada con su dirección.Aquí vive el código inicial y de aquí parte al desarrollo.
     output: { //Donde se envía el proyecto estructurado y compilado listo para producción.
         path: path.resolve(__dirname, 'dist'),  //Creamos el lugar dónde se exportará el proyecto.
         filename: 'main.js' //Este es el nombre del archivo final para producción.
@@ -20,7 +20,7 @@ module.exports = {
             //Reglas
             {
                 // Estructura de Babel
-                test: /\,js?$/, //Nos permite identificar los archivos según se encuentran en nuestro entorno.
+                test: /\.js?$/, //Nos permite identificar los archivos según se encuentran en nuestro entorno.
                 exclude: /node_modules/, //Excluimos la carpeta de node modules
                 use: {
                     loader: 'babel-loader', //Utilizar un loader como configuración establecida.
